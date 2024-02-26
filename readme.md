@@ -173,6 +173,7 @@ COPY . .
 RUN ./gradlew bootJar
 
 # Run the move command, "mv", from the recently built jar file to a new file called app.jar
+# make sure to verify the name "backend-0.0.1.jar" as named in gradle.build file where it says version = '0.0.1' or '0.0.1-SNAPSHOT' just make sure it matches. 
 RUN mv build/libs/backend-0.0.1.jar app.jar
 
 # EXPOSE lets devs know what port the container uses. Totally optional:
