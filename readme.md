@@ -221,6 +221,8 @@ FROM nginx:alpine
 
 # Copy from previous container(above) to this one.
 # From the container we called "build" to current [path from above] [path on this container]
+# double check the name of your project on the first line of package.json,
+# this will be the "frontend" of /app/dist/<YOUR PROJECT NAME>
 COPY --from=build /app/dist/frontend /usr/share/nginx/html
 
 # EXPOSE indicates primarily to users like you, which port is in use inside Docker
